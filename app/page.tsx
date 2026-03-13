@@ -1,5 +1,6 @@
 'use client';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Home() {
   const handleFormSubmit = (e: React.FormEvent) => {
@@ -196,9 +197,9 @@ export default function Home() {
               </div>
               <div className="footer-nav-col">
                 <h4>Legal</h4>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Disclaimer</a>
+                <Link href="/privacy">Privacy Policy</Link>
+                <Link href="/terms">Terms of Service</Link>
+                <Link href="/disclaimer">Disclaimer</Link>
               </div>
             </div>
           </div>
