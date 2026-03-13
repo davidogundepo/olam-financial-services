@@ -4,7 +4,7 @@ import Head from 'next/head';
 export default function Home() {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for reaching out. A representative will contact you shortly.');
+    alert('Thank you for reaching out to Olam Financial Services. Our advisors will contact you shortly.');
   };
 
   return (
@@ -13,8 +13,8 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <main id="top">
-        <header className="fixed-header">
-          <div className="container header-content">
+        <header className="pill-header">
+          <div className="header-content">
             <div className="logo-img-wrapper">
               <a href="#top">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -23,9 +23,9 @@ export default function Home() {
             </div>
             <nav>
               <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#team">Our Team</a></li>
+                <li><a href="#about">The Firm</a></li>
+                <li><a href="#services">Expertise</a></li>
+                <li><a href="#team">Leadership</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </nav>
@@ -33,39 +33,61 @@ export default function Home() {
           </div>
         </header>
 
-        <section className="hero">
-          <div className="container">
-            <div className="hero-content fade-in-up">
-              <h1>Elevating Your Financial Future.</h1>
-              <p>Experience sophisticated wealth management, strategic advisory, and personalized financial planning designed for the modern elite.</p>
+        <section className="hero-split">
+          <div className="container hero-grid">
+            <div className="hero-text fade-in-up">
+              <h1>Architects of <span>Generational</span> Wealth.</h1>
+              <p>Experience sophisticated wealth management, strategic advisory, and personalized financial planning designed exclusively for the modern elite.</p>
               <div className="hero-buttons">
                 <a href="#contact" className="btn btn-primary">Schedule Consultation</a>
-                <a href="#services" className="btn btn-secondary">Explore Services</a>
+                <a href="#services" className="btn btn-secondary">Our Expertise</a>
               </div>
+            </div>
+            <div className="hero-image-wrapper slide-left">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Financial Architecture" />
             </div>
           </div>
         </section>
 
         <section id="services" className="services">
           <div className="container">
-            <h2 className="section-title slide-up">First-Class Services</h2>
-            <p className="section-subtitle slide-up">We offer a comprehensive suite of financial solutions tailored to your unique objectives and designed to preserve and grow your wealth.</p>
+            <h2 className="section-title slide-up">First-Class Expertise</h2>
+            <p className="section-subtitle slide-up">We offer a comprehensive suite of financial solutions tailored to your unique objectives and designed to preserve and grow your assets.</p>
             
-            <div className="services-grid">
-              <div className="service-card slide-up-delay-1">
-                <div className="service-icon">💼</div>
+            <div className="service-row slide-up-delay-1">
+              <div className="service-text">
+                <div className="service-icon-large">💼</div>
                 <h3>Wealth Management</h3>
-                <p>Bespoke portfolio management strategies ensuring your assets are optimized for growth while mitigating risk in volatile markets.</p>
+                <p>Bespoke portfolio management strategies ensuring your assets are optimized for growth while mitigating risk in volatile markets. We align our advanced quantitative models with your personal legacy goals.</p>
               </div>
-              <div className="service-card slide-up-delay-2">
-                <div className="service-icon">📈</div>
+              <div className="service-image">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=2070&auto=format&fit=crop" alt="Wealth Management" />
+              </div>
+            </div>
+
+            <div className="service-row slide-up-delay-2">
+              <div className="service-text">
+                <div className="service-icon-large">📈</div>
                 <h3>Investment Advisory</h3>
-                <p>Data-driven insights and exclusive investment opportunities tailored to institutional and high-net-worth individual clients.</p>
+                <p>Data-driven insights and exclusive investment opportunities tailored to institutional and high-net-worth individual clients. Gain access to private markets and algorithmic trading strategies entirely hands-free.</p>
               </div>
-              <div className="service-card slide-up-delay-3">
-                <div className="service-icon">🛡️</div>
+              <div className="service-image">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Investment Advisory" />
+              </div>
+            </div>
+
+            <div className="service-row slide-up-delay-3">
+              <div className="service-text">
+                <div className="service-icon-large">🛡️</div>
                 <h3>Risk Management</h3>
-                <p>Comprehensive analysis to identify vulnerabilities and construct robust frameworks that protect against financial uncertainties.</p>
+                <p>Comprehensive analysis to identify vulnerabilities and construct robust frameworks that protect against absolute financial uncertainties. Peace of mind engineered by world-class forensic analysts.</p>
+              </div>
+              <div className="service-image">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop" alt="Risk Management" />
               </div>
             </div>
           </div>
@@ -73,49 +95,49 @@ export default function Home() {
 
         <section id="about" className="about">
           <div className="container">
-            <div className="about-content">
-              <div className="about-text slide-right">
-                <h2 className="section-title" style={{textAlign: 'left'}}>A Legacy of Excellence</h2>
-                <p>At Olam Financial Services, we believe that true wealth management transcends numbers—it's about empowering your vision for the future. Founded on principles of integrity, transparency, and uncompromising excellence, we curate financial strategies that align with your highest aspirations.</p>
-                <p>Our team of seasoned professionals brings decades of global market experience, providing you with a tactical advantage and profound peace of mind. We don't just manage wealth; we engineer legacies.</p>
-              </div>
-              <div className="about-image slide-left">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80" alt="Corporate meeting" />
-              </div>
+            <div className="about-box slide-up">
+              <h2>A Legacy of Excellence</h2>
+              <p>At Olam Financial Services, we believe that true wealth management transcends numbers—it&apos;s about empowering your vision for the future. Founded on principles of integrity, transparency, and uncompromising excellence, we curate financial strategies that align with your highest aspirations.</p>
+              <p>Our team of seasoned professionals brings decades of global market experience, providing you with a tactical advantage and profound peace of mind. We don&apos;t just manage wealth; we engineer legacies.</p>
             </div>
           </div>
         </section>
 
         <section id="team" className="team">
           <div className="container">
-            <h2 className="section-title slide-up">Our Leadership</h2>
-            <p className="section-subtitle slide-up">Meet the visionary minds orchestrating world-class financial strategies.</p>
+            <h2 className="section-title slide-up">Executive Leadership</h2>
+            <p className="section-subtitle slide-up">Meet the masterminds orchestrating world-class financial strategy.</p>
             
             <div className="team-grid">
               <div className="team-member slide-up-delay-1">
                 <div className="team-img-wrapper">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Obasohan Dimitris" />
+                  <img src="http://i.pinimg.com/1200x/e5/bd/59/e5bd59648226ae3180f95d1c1d4f10cf.jpg" alt="Adebayo Okafor" />
                 </div>
-                <h3>Obasohan Dimitris</h3>
-                <p>Managing Director</p>
+                <div className="team-info">
+                  <h3>Adebayo Okafor</h3>
+                  <p>Managing Director</p>
+                </div>
               </div>
               <div className="team-member slide-up-delay-2">
                 <div className="team-img-wrapper">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Elena Rodriguez" />
+                  <img src="https://i.pinimg.com/736x/de/46/73/de46731ccd0e1c9d3c00808f5f6a2f33.jpg" alt="Fatima Balogun" />
                 </div>
-                <h3>Elena Rodriguez</h3>
-                <p>Chief Investment Officer</p>
+                <div className="team-info">
+                  <h3>Fatima Balogun</h3>
+                  <p>Head of Risk Management</p>
+                </div>
               </div>
               <div className="team-member slide-up-delay-3">
                 <div className="team-img-wrapper">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Marcus Chen" />
+                  <img src="https://i.pinimg.com/736x/78/9e/3c/789e3c79419d714d1623d04c05213a05.jpg" alt="Chinedu Eze" />
                 </div>
-                <h3>Marcus Chen</h3>
-                <p>Head of Risk Management</p>
+                <div className="team-info">
+                  <h3>Chinedu Eze</h3>
+                  <p>Chief Investment Officer</p>
+                </div>
               </div>
             </div>
           </div>
@@ -123,56 +145,65 @@ export default function Home() {
 
         <section id="contact" className="contact">
           <div className="container">
-            <div className="contact-container slide-up">
+            <div className="contact-card slide-up">
               <div className="contact-info">
-                <h3>Connect With Us</h3>
-                <p>Step into a new echelon of financial service. Reach out to our advisors to begin a confidential dialogue about your objectives.</p>
+                <h3>Confidential Dialogue</h3>
+                <p>Step into a new echelon of financial service. Reach out to our advisors to begin a highly confidential dialogue regarding your investment objectives and structuring needs.</p>
                 
-                <div className="contact-details">
-                  <div className="contact-item">
-                    <span className="contact-icon">📍</span>
-                    <span>Nigeria</span>
-                  </div>
-                  <div className="contact-item">
-                    <span className="contact-icon">📞</span>
-                    <span>07079693500</span>
-                  </div>
-                  <div className="contact-item">
-                    <span className="contact-icon">✉️</span>
-                    <span>david.oludepo@gmail.com</span>
-                  </div>
+                <div className="contact-item">
+                  <span className="contact-icon">📍</span>
+                  <span>Nigeria</span>
+                </div>
+                <div className="contact-item">
+                  <span className="contact-icon">📞</span>
+                  <span>07079693500</span>
+                </div>
+                <div className="contact-item">
+                  <span className="contact-icon">✉️</span>
+                  <span>david.oludepo@gmail.com</span>
                 </div>
               </div>
               
-              <form className="contact-form" onSubmit={handleFormSubmit}>
+              <form onSubmit={handleFormSubmit}>
                 <div className="form-group">
                   <input type="text" placeholder="Full Name" required />
                 </div>
                 <div className="form-group">
-                  <input type="email" placeholder="Email Address" required />
+                  <input type="email" placeholder="Private Email Address" required />
                 </div>
                 <div className="form-group">
-                  <textarea placeholder="How can we assist you?" required></textarea>
+                  <textarea placeholder="Nature of Inquiry" required></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary" style={{alignSelf: 'flex-start'}}>Send Message</button>
+                <button type="submit" className="btn btn-primary">Transmit Message</button>
               </form>
             </div>
           </div>
         </section>
 
         <footer>
-          <div className="container">
-            <div className="footer-logo-wrapper">
-               {/* eslint-disable-next-line @next/next/no-img-element */}
-               <img src="/logo.png" alt="Olam Financial Services Logo" className="footer-logo-img" />
+          <div className="footer-grid">
+            <div className="footer-brand">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.png" alt="Olam Financial Services Logo" className="footer-logo-img" />
+              <p>Engineered for generational growth, built upon unyielding foundations of quantitative rigor and global insights.</p>
             </div>
-            <div className="footer-links">
-              <a href="#services">Services</a>
-              <a href="#about">About</a>
-              <a href="#team">Team</a>
-              <a href="#contact">Contact</a>
+            <div className="footer-nav">
+              <div className="footer-nav-col">
+                <h4>Navigation</h4>
+                <a href="#top">Platform</a>
+                <a href="#about">The Firm</a>
+                <a href="#services">Expertise</a>
+              </div>
+              <div className="footer-nav-col">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Disclaimer</a>
+              </div>
             </div>
-            <p className="copyright">&copy; {new Date().getFullYear()} Olam Financial Services. All Rights Reserved.</p>
+          </div>
+          <div className="footer-bottom">
+            <p>&copy; {new Date().getFullYear()} Olam Financial Services. All Rights Reserved.</p>
           </div>
         </footer>
       </main>
