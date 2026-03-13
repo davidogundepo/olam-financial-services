@@ -51,11 +51,7 @@ export default function PrivacyPolicy() {
                   <img src="/logo.png" alt="Olam Financial Services Logo" className="footer-logo-img" />
                 </div>
                 <p>Engineered for generational growth, built upon unyielding foundations of quantitative rigor and global insights.</p>
-                <div className="social-links">
-                  <a href="#" className="social-icon">LinkedIn</a>
-                  <a href="#" className="social-icon">Twitter</a>
-                  <a href="#" className="social-icon">Bloomberg</a>
-                </div>
+
               </div>
               <div className="footer-nav-col">
                 <h4>Navigation</h4>
