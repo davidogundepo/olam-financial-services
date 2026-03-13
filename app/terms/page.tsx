@@ -41,9 +41,45 @@ export default function TermsOfService() {
           <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>These terms shall be governed by and construed in accordance with the laws of the Federal Republic of Nigeria.</p>
         </section>
 
-        <footer>
-          <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Olam Financial Services. All Rights Reserved.</p>
+        <footer className="elegant-footer">
+          <div className="container">
+            <div className="footer-top">
+              <div className="footer-brand">
+                <div className="footer-logo-wrapper">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/logo.png" alt="Olam Financial Services Logo" className="footer-logo-img" />
+                </div>
+                <p>Engineered for generational growth, built upon unyielding foundations of quantitative rigor and global insights.</p>
+                <div className="social-links">
+                  <a href="#" className="social-icon">LinkedIn</a>
+                  <a href="#" className="social-icon">Twitter</a>
+                  <a href="#" className="social-icon">Bloomberg</a>
+                </div>
+              </div>
+              <div className="footer-nav-col">
+                <h4>Navigation</h4>
+                <Link href="/#about">Platform</Link>
+                <Link href="/#about">The Firm</Link>
+                <Link href="/#services">Expertise</Link>
+              </div>
+              <div className="footer-nav-col">
+                <h4>Legal</h4>
+                <Link href="/privacy">Privacy Policy</Link>
+                <Link href="/terms">Terms of Service</Link>
+                <Link href="/disclaimer">Disclaimer</Link>
+              </div>
+              <div className="footer-newsletter">
+                <h4>Market Insights</h4>
+                <p>Subscribe to our exclusive quantitative research newsletter.</p>
+                <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
+                  <input type="email" placeholder="Institutional Email" required />
+                  <button type="submit">Subscribe</button>
+                </form>
+              </div>
+            </div>
+            <div className="footer-bottom elegant-footer-bottom">
+              <p>&copy; {new Date().getFullYear()} Olam Financial Services. All Rights Reserved.</p>
+            </div>
           </div>
         </footer>
       </main>
