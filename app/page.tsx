@@ -1,8 +1,13 @@
 'use client';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert('Thank you for reaching out to Olam Financial Services. Our advisors will contact you shortly.');
@@ -14,23 +19,25 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <main id="top">
-        <header className="pill-header">
+        <header className="pill-header slide-up-delay-1">
           <div className="header-content">
-            <div className="logo-img-wrapper">
-              <a href="#top">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo.png" alt="Olam Financial Services Logo" className="logo-image" style={{cursor: 'pointer'}} />
-              </a>
+            <div className="logo-img-wrapper" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.png" alt="Olam Financial Services Logo" className="logo-image" style={{cursor: 'pointer'}} />
             </div>
-            <nav>
+            
+            <div className={`hamburger-menu ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
+              <span></span><span></span><span></span>
+            </div>
+
+            <nav className={`main-nav ${isMobileMenuOpen ? 'open' : ''}`}>
               <ul>
-                <li><a href="#about">The Firm</a></li>
-                <li><a href="#services">Expertise</a></li>
-                <li><a href="#team">Leadership</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" onClick={closeMobileMenu}>The Firm</a></li>
+                <li><a href="#services" onClick={closeMobileMenu}>Expertise</a></li>
+                <li><a href="#team" onClick={closeMobileMenu}>Leadership</a></li>
+                <li><a href="#contact" onClick={closeMobileMenu}>Contact</a></li>
               </ul>
             </nav>
-            <button className="mobile-menu-btn">☰</button>
           </div>
         </header>
 
@@ -181,17 +188,24 @@ export default function Home() {
           </div>
         </section>
 
-        <footer>
-          <div className="footer-grid">
-            <div className="footer-brand">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.png" alt="Olam Financial Services Logo" className="footer-logo-img" />
-              <p>Engineered for generational growth, built upon unyielding foundations of quantitative rigor and global insights.</p>
-            </div>
-            <div className="footer-nav">
+        <footer className="elegant-footer">
+          <div className="container">
+            <div className="footer-top">
+              <div className="footer-brand">
+                <div className="footer-logo-wrapper">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/logo.png" alt="Olam Financial Services Logo" className="footer-logo-img" />
+                </div>
+                <p>Engineered for generational growth, built upon unyielding foundations of quantitative rigor and global insights.</p>
+                <div className="social-links">
+                  <a href="#" className="social-icon">LinkedIn</a>
+                  <a href="#" className="social-icon">Twitter</a>
+                  <a href="#" className="social-icon">Bloomberg</a>
+                </div>
+              </div>
               <div className="footer-nav-col">
                 <h4>Navigation</h4>
-                <a href="#top">Platform</a>
+                <a href="#about">Platform</a>
                 <a href="#about">The Firm</a>
                 <a href="#services">Expertise</a>
               </div>
@@ -201,10 +215,18 @@ export default function Home() {
                 <Link href="/terms">Terms of Service</Link>
                 <Link href="/disclaimer">Disclaimer</Link>
               </div>
+              <div className="footer-newsletter">
+                <h4>Market Insights</h4>
+                <p>Subscribe to our exclusive quantitative research newsletter.</p>
+                <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
+                  <input type="email" placeholder="Institutional Email" required />
+                  <button type="submit">Subscribe</button>
+                </form>
+              </div>
             </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Olam Financial Services. All Rights Reserved.</p>
+            <div className="footer-bottom elegant-footer-bottom">
+              <p>&copy; {new Date().getFullYear()} Olam Financial Services. All Rights Reserved.</p>
+            </div>
           </div>
         </footer>
       </main>
