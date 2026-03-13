@@ -19,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <main id="top">
-        <header className="pill-header slide-up-delay-1">
+        <header className="pill-header">
           <div className="header-content">
             <div className="logo-img-wrapper" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -120,10 +120,10 @@ export default function Home() {
               <div className="team-member slide-up-delay-1">
                 <div className="team-img-wrapper">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="http://i.pinimg.com/1200x/e5/bd/59/e5bd59648226ae3180f95d1c1d4f10cf.jpg" alt="Obasohan Dimitris" />
+                  <img src="https://i.pinimg.com/736x/78/9e/3c/789e3c79419d714d1623d04c05213a05.jpg" alt="Adebayo Ogunlesi" />
                 </div>
                 <div className="team-info">
-                  <h3>Obasohan Dimitris</h3>
+                  <h3>Adebayo Ogunlesi</h3>
                   <p>Managing Director</p>
                 </div>
               </div>
@@ -140,10 +140,10 @@ export default function Home() {
               <div className="team-member slide-up-delay-3">
                 <div className="team-img-wrapper">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://i.pinimg.com/736x/78/9e/3c/789e3c79419d714d1623d04c05213a05.jpg" alt="Adebayo" />
+                  <img src="http://i.pinimg.com/1200x/e5/bd/59/e5bd59648226ae3180f95d1c1d4f10cf.jpg" alt="Obasohan Dimitris" />
                 </div>
                 <div className="team-info">
-                  <h3>Adebayo</h3>
+                  <h3>Obasohan Dimitris</h3>
                   <p>Chief Investment Officer</p>
                 </div>
               </div>
